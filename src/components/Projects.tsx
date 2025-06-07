@@ -163,6 +163,20 @@ const Projects = () => {
   const openProjectDetails = (project: Project) => {
     setSelectedProject(project);
     setShowModal(true);
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+  };
+
+  // Close modal function
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedProject(null);
+    // Restore body scroll when modal is closed
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.width = '';
   };
 
   // Filter projects by tag
@@ -315,92 +329,111 @@ const Projects = () => {
         </div>
       </div>
       
-      {/* Project details modal */}
+      {/* Project details modal - SIMPLIFIED STRUCTURE */}
       {showModal && selectedProject && (
-        <div className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center z-50 px-4 py-6 crt-vignette vhs-tracking">
-          <div className="absolute inset-0" onClick={() => setShowModal(false)}></div>
-          
-          <div className="monitor-frame bg-black max-w-2xl w-full max-h-[85vh] overflow-y-auto relative z-10 animate-modal-fade-in crt-on">
-            {/* Modal header */}
-            <div className="flex justify-between items-center border-b border-retro-cyan p-3 md:p-4 sticky top-0 bg-black z-10">
-              <div className="flex items-center">
-                <div className="flex space-x-1 mr-3 md:mr-4">
-                  <div className="w-3 h-3 bg-retro-pink"></div>
-                  <div className="w-3 h-3 bg-retro-yellow"></div>
-                  <div className="w-3 h-3 bg-retro-green"></div>
-                </div>
-                <h3 className="glitch-clip text-retro-cyan font-bold text-lg" data-text={selectedProject.title}>
-                  {selectedProject.title}
-                </h3>
-              </div>
-              
-              <button 
-                onClick={() => setShowModal(false)}
-                className="text-retro-pink hover:text-white"
-              >
-                <span className="pixel-text text-xl">×</span>
-              </button>
-            </div>
+        <div 
+          className="modal-overlay-enhanced"
+          style={{
+            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '2rem'
+          }}
+          onClick={closeModal}
+        >
+          <div
+            style={{
+              backgroundColor: '#111827', // Solid dark gray
+              color: 'white',
+              padding: '2rem',
+              width: '100%',
+              maxWidth: '800px',
+              maxHeight: '90vh',
+              overflowY: 'auto',
+              border: '2px solid var(--retro-cyan)',
+              borderRadius: '8px',
+              boxShadow: '0 0 25px rgba(0, 255, 255, 0.5)',
+              position: 'relative'
+            }}
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+          >
+            {/* Close Button */}
+            <button 
+              onClick={closeModal}
+              style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                background: '#ef4444',
+                color: 'white',
+                border: '1px solid white',
+                borderRadius: '50%',
+                width: '30px',
+                height: '30px',
+                fontSize: '1rem',
+                lineHeight: '1',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              X
+            </button>
             
-            {/* Modal body */}
-            <div className="p-4 md:p-6 digital-noise">
-              {/* Project image */}
-              <div className="relative h-48 md:h-60 mb-6 overflow-hidden border border-retro-cyan/30 pixel-border">
-                <div className="scanlines-animated absolute inset-0 z-20 opacity-20"></div>
-                <Image 
-                  src={selectedProject.image} 
-                  alt={selectedProject.title}
-                  width={800}
-                  height={400}
-                  className="object-cover w-full h-full"
-                />
+            {/* Modal Content */}
+            <h3 style={{ color: 'var(--retro-cyan)', fontSize: '1.5rem', marginBottom: '1.5rem', fontFamily: 'var(--font-retro)' }}>
+              {selectedProject.title}
+            </h3>
+            
+            <div style={{ marginBottom: '1.5rem' }}>
+              <Image 
+                src={selectedProject.image} 
+                alt={selectedProject.title}
+                width={800}
+                height={400}
+                style={{ width: '100%', height: 'auto', border: '1px solid var(--retro-cyan)' }}
+              />
+            </div>
+
+            <div style={{ marginBottom: '1.5rem' }}>
+              <h4 style={{ color: 'var(--retro-yellow)', fontSize: '1.2rem', marginBottom: '1rem', fontFamily: 'var(--font-retro)' }}>
+                Description
+              </h4>
+              <p style={{ lineHeight: '1.6' }}>{selectedProject.description}</p>
+            </div>
+
+            <div style={{ marginBottom: '1.5rem' }}>
+              <h4 style={{ color: 'var(--retro-yellow)', fontSize: '1.2rem', marginBottom: '1rem', fontFamily: 'var(--font-retro)' }}>
+                Technologies
+              </h4>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                {selectedProject.tags.map(tag => (
+                  <span key={tag} style={{ padding: '0.5rem 1rem', backgroundColor: 'var(--retro-cyan)', color: 'black', fontFamily: 'var(--font-retro)', fontSize: '0.75rem' }}>
+                    {tag}
+                  </span>
+                ))}
               </div>
-              
-              {/* Project content in two-column layout on desktop */}
-              <div className="md:grid md:grid-cols-5 gap-3">
-                <div className="md:col-span-3 mb-4 md:mb-0">
-                  {/* Project description */}
-                  <div className="mb-4">
-                    <h4 className="text-retro-yellow pixel-text mb-2">PROJECT DESCRIPTION_</h4>
-                    <p className="text-white/90 text-sm">{selectedProject.description}</p>
-                  </div>
-                </div>
-                
-                <div className="md:col-span-2">
-                  {/* Technologies used */}
-                  <div className="mb-4">
-                    <h4 className="text-retro-yellow pixel-text mb-2">TECH STACK_</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {selectedProject.tags.map(tag => (
-                        <span key={tag} className="inline-block px-2 py-1 text-xs bg-black text-retro-cyan border border-retro-cyan pixel-corners">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Project links */}
-              <div className="flex flex-col sm:flex-row gap-4 mt-4 md:mt-6">
-                <a 
-                  href={selectedProject.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="btn-8bit btn-8bit-hover flex-1 px-4 py-2 text-center"
-                >
-                  <span className="pixel-text">LIVE DEMO</span>
-                </a>
-                
-                <a 
-                  href={selectedProject.githubLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="btn-8bit btn-8bit-hover flex-1 px-4 py-2 text-center bg-black text-retro-pink border border-retro-pink hover:bg-retro-pink hover:text-black"
-                >
-                  <span className="pixel-text">SOURCE CODE</span>
-                </a>
-              </div>
+            </div>
+
+            <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
+              <a 
+                href={selectedProject.link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-retro-primary"
+              >
+                Live Demo
+              </a>
+              <a 
+                href={selectedProject.githubLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-retro-secondary"
+              >
+                Source Code
+              </a>
             </div>
           </div>
         </div>

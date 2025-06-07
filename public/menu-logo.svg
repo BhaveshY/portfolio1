@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
+  <!-- Simple retro diamond/pixel icon -->
+  <rect width="20" height="20" fill="transparent"/>
+  
+  <!-- Centered diamond pattern -->
+  <rect x="9" y="3" width="2" height="2" fill="#00ffff"/>
+  <rect x="7" y="5" width="2" height="2" fill="#00ffff"/>
+  <rect x="9" y="5" width="2" height="2" fill="#ff2a6d"/>
+  <rect x="11" y="5" width="2" height="2" fill="#00ffff"/>
+  <rect x="5" y="7" width="2" height="2" fill="#00ffff"/>
+  <rect x="7" y="7" width="2" height="2" fill="#ff2a6d"/>
+  <rect x="9" y="7" width="2" height="2" fill="#7fff00"/>
+  <rect x="11" y="7" width="2" height="2" fill="#ff2a6d"/>
+  <rect x="13" y="7" width="2" height="2" fill="#00ffff"/>
+  <rect x="7" y="9" width="2" height="2" fill="#00ffff"/>
+  <rect x="9" y="9" width="2" height="2" fill="#ff2a6d"/>
+  <rect x="11" y="9" width="2" height="2" fill="#00ffff"/>
+  <rect x="9" y="11" width="2" height="2" fill="#00ffff"/>
+</svg> 

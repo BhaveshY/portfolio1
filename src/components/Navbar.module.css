@@ -1,0 +1,33 @@
+.navbar {
+  background-color: var(--color-block-bg);
+  padding: 15px 20px; /* Slightly more padding */
+  text-align: center;
+  border-bottom: 3px solid var(--color-primary-accent); /* Thicker border for retro feel */
+  margin-bottom: 20px; /* Space below navbar */
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Space between nav items */
+}
+
+.navItem a {
+  color: var(--color-text);
+  font-size: 1rem; /* 16px, good base for Press Start 2P */
+  text-decoration: none;
+  padding: 5px 10px; /* Add some padding to make links easier to click */
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.navItem a:hover,
+.navItem a:focus {
+  color: var(--color-primary-accent);
+  /* Optional: add a subtle background on hover for a more button-like feel */
+  /* background-color: var(--color-secondary-accent); */
+  /* color: var(--color-bg); */ 
+  text-decoration: none; /* Pixel fonts often don't look good with underline */
+} 

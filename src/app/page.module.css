@@ -1,0 +1,77 @@
+.pageSection {
+  margin-bottom: 40px;
+  padding-top: 20px; /* Add some space above section title if needed */
+}
+
+.pageSection h2 {
+  /* Global h2 styles will apply for color and font */
+  font-size: 1.5rem; /* 24px */
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px dashed var(--color-secondary-accent);
+  display: inline-block; /* So border-bottom only spans the text width */
+}
+
+.entryBlock {
+  background-color: var(--color-block-bg);
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 3px solid var(--color-secondary-accent);
+  box-shadow: 5px 5px 0px 0px var(--color-primary-accent); /* Consistent retro shadow */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out; /* Added border-color transition */
+}
+
+.entryBlock:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0px 0px var(--color-primary-accent);
+  border-color: var(--color-primary-accent); /* Change border color on hover */
+}
+
+.entryTitle {
+  font-size: 1.25rem; /* 20px */
+  color: var(--color-primary-accent);
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.entrySubtitle {
+  font-size: 0.9375rem; /* 15px */
+  color: var(--color-text); /* Brighter than default paragraph for emphasis */
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.entryDescription {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.7;
+  margin-bottom: 0; /* Remove bottom margin if last element */
+}
+
+.entryDescription ul {
+  list-style-type: none; /* Using custom bullet */
+  padding-left: 0; /* Or a small padding like 10px if preferred */
+  margin-top: 10px;
+}
+
+.entryDescription li {
+  margin-bottom: 8px;
+  font-size: 0.875rem; /* 14px */
+  padding-left: 20px; /* Space for custom bullet */
+  position: relative;
+}
+
+.entryDescription li::before {
+  content: '>'; /* Retro bullet */
+  position: absolute;
+  left: 0;
+  color: var(--color-primary-accent);
+  font-weight: bold; /* Make it stand out */
+}
+
+/* Custom class for resume button if specific layout is needed alongside .retro-btn */
+.resumeButtonCustom {
+  display: inline-block; /* Ensures it behaves like a button */
+  margin-top: 10px; /* Example: add some top margin if needed */
+  /* .retro-btn already defines colors, padding, font, etc. */
+  /* This class is for minor layout adjustments if .retro-btn defaults aren't perfect in context */
+} 

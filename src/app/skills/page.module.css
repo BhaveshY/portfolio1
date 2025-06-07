@@ -1,0 +1,67 @@
+.skillsContainer h1 {
+  margin-bottom: 10px; /* Tighter spacing after main page title */
+}
+
+.skillsContainer > p {
+  font-size: 1rem; /* Ensure intro paragraph is readable */
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.skillCategory {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.1); /* Subtle background for category blocks */
+  border: 2px solid var(--color-block-bg);
+}
+
+.skillCategory h2 {
+  /* Uses global h2 style for color (primary accent) */
+  font-size: 1.25rem; /* 20px - or 1.5rem (24px) if preferred */
+  margin-top: 0; /* Remove top margin as it's inside a padded block */
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px dashed var(--color-secondary-accent); /* Dashed retro border */
+}
+
+.skillListDetailed, .skillListConcepts {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.skillListDetailed li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+  margin-bottom: 8px;
+  background-color: var(--color-block-bg);
+  border-left: 4px solid var(--color-primary-accent);
+  font-size: 0.9375rem; /* 15px */
+}
+
+.skillName {
+  color: var(--color-text);
+  /* flex-grow: 1; /* Optional: makes name take available space */
+}
+
+.skillLevel {
+  color: var(--color-secondary-accent);
+  font-weight: bold; /* Or keep it normal for pixel font */
+  margin-left: 10px; /* Space between name and level */
+}
+
+.skillListConcepts li {
+  padding: 8px 5px;
+  margin-bottom: 8px;
+  background-color: var(--color-block-bg);
+  border-left: 4px solid var(--color-secondary-accent);
+  font-size: 0.9375rem; /* 15px */
+}
+
+/* Optional: Add a retro bullet effect for concept lists */
+.skillListConcepts li::before {
+  content: ">"; /* Simple retro prefix */
+  margin-right: 10px;
+  color: var(--color-primary-accent);
+} 

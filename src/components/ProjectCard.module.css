@@ -1,0 +1,74 @@
+.card {
+  background-color: var(--color-block-bg);
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 3px solid var(--color-secondary-accent);
+  box-shadow: 5px 5px 0px 0px var(--color-primary-accent); /* Retro shadow effect */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out; /* Added border-color transition */
+}
+
+.card:hover {
+  transform: translate(-3px, -3px); /* Slightly more pronounced */
+  box-shadow: 8px 8px 0px 0px var(--color-primary-accent); /* Slightly larger shadow */
+  border-color: var(--color-primary-accent); /* Highlight border on hover */
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border: 2px solid var(--color-text); /* Border around image */
+  image-rendering: pixelated; /* Ensure pixel art images stay crisp */
+}
+
+.title { /* Already styled by h3 global styles, but can add specifics */
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.5rem; /* 24px, or adjust if h3 global is different */
+  color: var(--color-primary-accent); /* Ensure it uses primary accent */
+}
+
+.description {
+  font-size: 0.9375rem; /* 15px, for readability */
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.tagsContainer {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--color-secondary-accent);
+  color: var(--color-text);
+  padding: 4px 8px;
+  font-size: 0.75rem; /* 12px */
+  border-radius: 0; /* Sharp edges for pixel feel */
+  /* border: 1px solid var(--color-text); */ /* Optional border for tags */
+}
+
+.linksContainer {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.link {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: var(--color-primary-accent);
+  color: var(--color-text) !important; /* Important to override default link color from global if needed */
+  text-decoration: none;
+  font-size: 0.875rem; /* 14px */
+  border: 2px solid var(--color-text);
+}
+
+.link:hover {
+  background-color: var(--color-secondary-accent);
+  color: var(--color-text) !important;
+  text-decoration: none;
+} 

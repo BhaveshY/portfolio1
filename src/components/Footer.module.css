@@ -1,0 +1,21 @@
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px; /* Ensures space above the footer */
+  border-top: 3px solid var(--color-block-bg); /* Consistent with Navbar border */
+  font-size: 0.875rem; /* 14px, slightly smaller for footer text */
+  color: var(--color-text); /* Explicitly set text color */
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: var(--color-secondary-accent);
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  color: var(--color-primary-accent);
+} 

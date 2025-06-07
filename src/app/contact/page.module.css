@@ -1,0 +1,107 @@
+.contactContainer h1 {
+  margin-bottom: 10px;
+}
+
+.contactContainer > p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap for better spacing */
+  max-width: 600px; /* Slightly wider form */
+  margin: 0 auto 40px auto; /* Center form and add bottom margin */
+  padding: 25px;
+  background-color: rgba(0,0,0,0.1);
+  border: 2px solid var(--color-block-bg);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-size: 0.875rem; /* 14px */
+  margin-bottom: 8px;
+  color: var(--color-text); 
+}
+
+.formGroup input,
+.formGroup textarea {
+  font-family: var(--font-retro); /* Crucial for retro form fields */
+  padding: 12px 15px;
+  background-color: var(--color-bg); /* Darker background for input fields */
+  border: 2px solid var(--color-secondary-accent);
+  color: var(--color-text);
+  font-size: 1rem; /* 16px for input text */
+  outline: none; /* Remove default outline */
+  transition: border-color 0.2s ease-in-out;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: #888; /* Slightly lighter placeholder text */
+  opacity: 1; /* Ensure placeholder is visible */
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: var(--color-primary-accent);
+}
+
+.submitButton {
+  font-family: var(--font-retro);
+  padding: 12px 20px;
+  background-color: var(--color-primary-accent);
+  color: var(--color-text);
+  border: 2px solid var(--color-text); /* Text color border */
+  cursor: pointer;
+  font-size: 1rem; /* 16px */
+  align-self: flex-start; /* Button doesn't stretch full width */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  text-transform: uppercase; /* Retro button text */
+}
+
+.submitButton:hover {
+  background-color: var(--color-secondary-accent);
+  border-color: var(--color-text);
+}
+
+.socialLinksContainer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.socialLinksContainer h2 {
+  font-size: 1.25rem; /* 20px */
+  margin-bottom: 20px;
+}
+
+.socialLinksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Space between social links */
+  flex-wrap: wrap;
+}
+
+.socialLinksList li a {
+  color: var(--color-secondary-accent);
+  font-size: 1.125rem; /* 18px for social links */
+  padding: 5px 10px;
+  display: inline-block;
+  border: 2px dashed transparent; /* For focus state */
+}
+
+.socialLinksList li a:hover,
+.socialLinksList li a:focus {
+  color: var(--color-primary-accent);
+  text-decoration: none;
+  border-color: var(--color-primary-accent); /* Dashed border on hover/focus */
+} 

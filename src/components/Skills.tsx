@@ -17,7 +17,6 @@ interface SkillsProps {
 const Skills = ({ skills, darkMode = false }: SkillsProps) => {
   const [isClient, setIsClient] = useState(false);
   const [skillsLoaded, setSkillsLoaded] = useState(false);
-  const [showCursor, setShowCursor] = useState(true);
   
   // Group skills by category
   const categorizedSkills = skills.reduce<Record<string, Skill[]>>((acc, skill) => {
@@ -41,15 +40,6 @@ const Skills = ({ skills, darkMode = false }: SkillsProps) => {
     data: 'DATA.BIN',
     tools: 'TOOLS.BAT'
   };
-  
-  // Blinking cursor effect
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShowCursor(prev => !prev);
-    }, 530);
-    
-    return () => clearInterval(interval);
-  }, []);
   
   // Ensure animations only run on client
   useEffect(() => {
@@ -107,7 +97,7 @@ const Skills = ({ skills, darkMode = false }: SkillsProps) => {
           {/* Loading section */}
           {!skillsLoaded && (
             <div className="absolute inset-0 bg-black bg-opacity-90 z-10 flex flex-col items-center justify-center content-wrapper">
-              <div className="pixel-text text-retro-cyan text-xl content-spacing">LOADING SKILLS<span className="loading-dots"></span></div>
+              <div className="pixel-text text-retro-cyan text-xl content-spacing">LOADING SKILLS...</div>
               <div className="progress-8bit w-56">
                 <div className="progress-8bit-bar animate-progress-bar"></div>
               </div>
@@ -116,7 +106,7 @@ const Skills = ({ skills, darkMode = false }: SkillsProps) => {
           
           <div className="text-xs font-mono text-retro-cyan content-spacing flex items-center">
             <span className="text-retro-green mr-2">$</span>
-            <span className="typing-effect">cat /usr/skills/{activeCategory}.json</span>
+            <span>cat /usr/skills/{activeCategory}.json</span>
           </div>
           
           {/* Category Tabs */}
@@ -213,7 +203,7 @@ const Skills = ({ skills, darkMode = false }: SkillsProps) => {
           
           <div className="mt-4 text-[9px] opacity-70 font-mono flex items-center justify-between">
             <span className="text-retro-green"># Skills data loaded from system database</span>
-            <span className="text-retro-cyan">v1.0.2 <span className="opacity-100">{showCursor ? '_' : ''}</span></span>
+            <span className="text-retro-cyan">v1.0.2</span>
           </div>
         </div>
       </div>

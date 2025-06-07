@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Skills from './Skills';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -41,161 +40,7 @@ const About = () => {
       
       return () => clearInterval(interval);
     }
-  }, [isVisible]);
-
-  const skills = [
-    // Programming Languages & Frameworks
-    { 
-      name: 'Python', 
-      level: 95, 
-      category: 'programming' as const,
-      description: 'Expert in Python for data analysis, web services, automation, and ML pipelines.' 
-    },
-    { 
-      name: 'JavaScript/TypeScript', 
-      level: 92, 
-      category: 'programming' as const,
-      description: 'Full-stack development with React, Node.js, and modern ES6+ features.' 
-    },
-    { 
-      name: 'R', 
-      level: 88, 
-      category: 'programming' as const,
-      description: 'Statistical computing, data visualization, and exploratory data analysis.' 
-    },
-    { 
-      name: 'Java', 
-      level: 82, 
-      category: 'programming' as const,
-      description: 'Enterprise applications and distributed systems development.' 
-    },
-    { 
-      name: 'C++', 
-      level: 78, 
-      category: 'programming' as const,
-      description: 'High-performance computing and algorithm optimization.' 
-    },
-    { 
-      name: 'React/Next.js', 
-      level: 90, 
-      category: 'programming' as const,
-      description: 'Modern web applications with server-side rendering and static generation.' 
-    },
-    
-    // Data Science & Analytics
-    { 
-      name: 'SQL/NoSQL', 
-      level: 93, 
-      category: 'data' as const,
-      description: 'Advanced database design, optimization, and complex analytical queries.' 
-    },
-    { 
-      name: 'Pandas/NumPy', 
-      level: 95, 
-      category: 'data' as const,
-      description: 'Data manipulation, cleaning, and numerical computing at scale.' 
-    },
-    { 
-      name: 'Apache Spark', 
-      level: 85, 
-      category: 'data' as const,
-      description: 'Big data processing, distributed computing, and real-time analytics.' 
-    },
-    { 
-      name: 'Statistical Analysis', 
-      level: 90, 
-      category: 'data' as const,
-      description: 'Hypothesis testing, regression analysis, A/B testing, and experimental design.' 
-    },
-    { 
-      name: 'Data Visualization', 
-      level: 92, 
-      category: 'data' as const,
-      description: 'Tableau, D3.js, Matplotlib, Seaborn, and interactive dashboard creation.' 
-    },
-    { 
-      name: 'ETL Pipelines', 
-      level: 88, 
-      category: 'data' as const,
-      description: 'Airflow, Apache Beam, and automated data workflow orchestration.' 
-    },
-    
-    // Machine Learning & AI
-    { 
-      name: 'Machine Learning', 
-      level: 93, 
-      category: 'ml' as const,
-      description: 'Supervised/unsupervised learning, ensemble methods, and feature engineering.' 
-    },
-    { 
-      name: 'Deep Learning', 
-      level: 88, 
-      category: 'ml' as const,
-      description: 'TensorFlow, PyTorch, neural networks for computer vision and NLP.' 
-    },
-    { 
-      name: 'NLP', 
-      level: 85, 
-      category: 'ml' as const,
-      description: 'Text processing, sentiment analysis, transformers, and language models.' 
-    },
-    { 
-      name: 'Computer Vision', 
-      level: 82, 
-      category: 'ml' as const,
-      description: 'Image classification, object detection, OpenCV, and CNN architectures.' 
-    },
-    { 
-      name: 'MLOps', 
-      level: 87, 
-      category: 'ml' as const,
-      description: 'Model deployment, monitoring, versioning, and CI/CD for ML systems.' 
-    },
-    { 
-      name: 'Reinforcement Learning', 
-      level: 75, 
-      category: 'ml' as const,
-      description: 'Q-learning, policy gradients, and multi-agent systems.' 
-    },
-    
-    // Tools & Technologies
-    { 
-      name: 'AWS/GCP/Azure', 
-      level: 85, 
-      category: 'tools' as const,
-      description: 'Cloud computing, serverless architectures, and scalable ML deployments.' 
-    },
-    { 
-      name: 'Docker/Kubernetes', 
-      level: 83, 
-      category: 'tools' as const,
-      description: 'Containerization, orchestration, and microservices architecture.' 
-    },
-    { 
-      name: 'Git/CI/CD', 
-      level: 90, 
-      category: 'tools' as const,
-      description: 'Version control, automated testing, and deployment pipelines.' 
-    },
-    { 
-      name: 'Jupyter/Colab', 
-      level: 95, 
-      category: 'tools' as const,
-      description: 'Interactive development, prototyping, and collaborative analysis.' 
-    },
-    { 
-      name: 'Linux/Unix', 
-      level: 88, 
-      category: 'tools' as const,
-      description: 'System administration, shell scripting, and server management.' 
-    },
-    { 
-      name: 'Hadoop Ecosystem', 
-      level: 78, 
-      category: 'tools' as const,
-      description: 'HDFS, Hive, HBase, and distributed data storage solutions.' 
-    }
-  ];
+  }, [isVisible, commands.length]);
 
   return (
     <section id="about" className="pt-2 md:pt-4 pb-8 md:pb-12 px-4 relative overflow-hidden">
@@ -248,7 +93,8 @@ const About = () => {
                   {commands.slice(0, showingCommand + 1).map((cmd, index) => (
                     <div key={index}>
                       <p className="mb-4 text-cyan-400">
-                        <span className="text-pink-500">$</span> {cmd}
+                        <span className="text-retro-green">$ </span>{cmd}
+                        {index === showingCommand && <span className="blinking-cursor">_</span>}
                       </p>
                       
                       {index === 0 && (
@@ -334,10 +180,6 @@ const About = () => {
                       )}
                     </div>
                   ))}
-                  
-                  <p className="text-cyan-400">
-                    <span className="text-pink-500">$</span> <span className="text-retro-cyan">_</span>
-                  </p>
                 </div>
               </div>
             </div>
@@ -355,39 +197,18 @@ const About = () => {
                   </div>
                   
                   <div className="bg-black border-t border-cyan-800 digital-noise p-0">
-                    <Skills skills={skills} darkMode={true} />
+                    <div className="text-center mt-6">
+                      <p className="text-retro-cyan pixel-text">Engage with my work below.</p>
+                    </div>
                   </div>
-                </div>
-              </div>
-              
-              {/* Data badges */}
-              <div className="retro-grid retro-grid-2 lg:grid-cols-4 gap-4 mt-6">
-                <div className="btn-8bit-small bg-black border-2 border-retro-cyan text-cyan-400 p-3 text-center btn-8bit-hover pixel-shadow">
-                  <div className="text-xs pixel-text">BADGE</div>
-                  <div className="text-lg font-bold">5+</div>
-                  <div className="text-xs">YEARS EXP</div>
-                </div>
-                
-                <div className="btn-8bit-small bg-black border-2 border-retro-pink text-pink-400 p-3 text-center btn-8bit-hover pixel-shadow">
-                  <div className="text-xs pixel-text">BADGE</div>
-                  <div className="text-lg font-bold">12+</div>
-                  <div className="text-xs">PROJECTS</div>
-                </div>
-                
-                <div className="btn-8bit-small bg-black border-2 border-retro-blue text-blue-400 p-3 text-center btn-8bit-hover pixel-shadow">
-                  <div className="text-xs pixel-text">BADGE</div>
-                  <div className="text-lg font-bold">MSc</div>
-                  <div className="text-xs">DATA SCI</div>
-                </div>
-                
-                <div className="btn-8bit-small bg-black border-2 border-retro-yellow text-yellow-400 p-3 text-center btn-8bit-hover pixel-shadow">
-                  <div className="text-xs pixel-text">BADGE</div>
-                  <div className="text-lg font-bold">3</div>
-                  <div className="text-xs">PATENTS</div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        
+        <div className="text-center mt-6">
+          <p className="text-retro-cyan pixel-text">Engage with my work below.</p>
         </div>
       </div>
     </section>

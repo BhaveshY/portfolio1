@@ -9,7 +9,7 @@ interface Project {
   description: string;
   tags: string[];
   image: string;
-  link: string;
+  link?: string;
   githubLink: string;
 }
 
@@ -52,8 +52,7 @@ const Projects = () => {
       description: "An interactive tutoring platform utilizing Generative AI to deliver personalized tutoring through advanced language models, enhancing learner engagement with focus on user-centered design. Features robust Error GPT that tracks user progress and custom evaluation metrics for improved student satisfaction.",
       tags: ["Generative AI", "Machine Learning", "React", "JavaScript", "HTML", "CSS", "TypeScript", "Javascript", ],
       image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTEwMDMzIi8+PGNpcmNsZSBjeD0iMjUwIiBjeT0iMTIwIiByPSI0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZlZjAwIiBzdHJva2Utd2lkdGg9IjMiLz48cGF0aCBkPSJNIDIwMCAxMDAgTCAzMDAgMTAwIEwgMzAwIDEwNSBMIDIwMCAxMDUgWiIgZmlsbD0iIzAwZmZmZiIvPjxwYXRoIGQ9Ik0gMjEwIDEyMCBMIDI5MCAxMjAgTCAyOTAgMTI1IEwgMjEwIDEyNSBaIiBmaWxsPSIjZmY0NDY2Ii8+PHBhdGggZD0iTSAyMjAgMTQwIEwgMjgwIDE0MCBMIDI4MCAxNDUgTCAyMjAgMTQ1IFoiIGZpbGw9IiNmZmVmMDAiLz48dGV4dCB4PSI1MCUiIHk9Ijc1JSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZmZWYwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VFVUT1IgR1BUPC90ZXh0Pjx0ZXh0IHg9IjUwJSIgeT0iOTAlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjMDBmZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BSSBUVVRPUklORzwvdGV4dD48L3N2Zz4=",
-      link: "https://github.com/Bhaveshytutor-xmwj/tree/main",
-      githubLink: "https://github.com/Bhaveshytutor-xmwj/tree/main"
+      githubLink: "https://github.com/BhaveshY/tutor-xoxo"
     },
     {
       id: 2,
@@ -61,8 +60,7 @@ const Projects = () => {
       description: "A comprehensive finance management application designed to minimize financial worries utilizing JavaScript, React Native, and MongoDB. Features an integrated JavaScript-powered interface for general user queries and responsive frontend for tracking and managing transactions using modern web technologies.",
       tags: ["React Native", "JavaScript", "MongoDB", "Node.js", "HTML", "CSS", "Typescript", "API", "LLM"],
       image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMDAzMzExIi8+PGNpcmNsZSBjeD0iMjAwIiBjeT0iMTIwIiByPSI0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZlZjAwIiBzdHJva2Utd2lkdGg9IjMiLz48dGV4dCB4PSIyMDAiIHk9IjEyNSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIyMCIgZmlsbD0iI2ZmZWYwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+JDwvdGV4dD48cGF0aCBkPSJNIDI4MCA4MCBMIDI5MCA4MCBMIDMwMCA5MCBMIDM1MCA5MCBMIDM1MCA5NSBMIDMwMCA5NSBMIDI5MCA5NSBMIDI4MCA5NSBaIiBmaWxsPSIjMDBmZjY2Ii8+PHBhdGggZD0iTSAyODAgMTEwIEwgMjkwIDExMCBMIDMwMCAxMTAgTCAzMDAgMTE1IEwgMjkwIDExNSBMIDI4MCAxMTUgWiIgZmlsbD0iI2ZmNDQ2NiIvPjxwYXRoIGQ9Ik0gMjgwIDEzMCBMIDI5MCAxMzAgTCAzMDUgMTMwIEwgMzA1IDEzNSBMIDI5MCAxMzUgTCAyODAgMTM1IFoiIGZpbGw9IiNmZjQ0NjYiLz48cGF0aCBkPSJNIDI4MCAxNTAgTCAzMjAgMTUwIEwgMzIwIDE1NSBMIDI4MCAxNTUgWiIgZmlsbD0iIzAwZmY2NiIvPjx0ZXh0IHg9IjUwJSIgeT0iNzUlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZmZlZjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5NT05FWDwvdGV4dD48dGV4dCB4PSI1MCUiIHk9IjkwJSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzAwZmZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RklOQU5DRSBBUFA8L3RleHQ+PC9zdmc+",
-      link: "https://github.com/Bhaveshyfmonexfront",
-      githubLink: "https://github.com/Bhaveshyfmonexfront"
+      githubLink: "https://github.com/BhaveshY/monexfront"
     },
   ];
 
@@ -328,14 +326,16 @@ const Projects = () => {
             </div>
 
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
-              <a 
-                href={selectedProject.link} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-retro-primary"
-              >
-                Live Demo
-              </a>
+              {selectedProject.link && (
+                <a 
+                  href={selectedProject.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn-retro-primary"
+                >
+                  Live Demo
+                </a>
+              )}
               <a 
                 href={selectedProject.githubLink} 
                 target="_blank" 

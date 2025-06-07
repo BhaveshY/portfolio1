@@ -149,15 +149,15 @@ const About = () => {
 
                       {index === 3 && (
                         <div className="pl-4 text-white animate-fade-in space-y-3">
-                          <div className="text-retro-magenta text-sm mb-3">🏆 Key Achievements:</div>
+                          <div className="text-retro-magenta text-sm mb-3">🚀 Key Achievements:</div>
                           <div className="space-y-2 text-xs">
-                            <div className="text-retro-yellow">• Created an interactive tutoring platform utilizing Generative AI</div>
-                            <div className="text-retro-cyan">• Developed Monex - comprehensive expense management system</div>
-                            <div className="text-retro-green">• Enhanced tutoring solution with custom evaluation metrics</div>
-                            <div className="text-retro-pink">• Engineered robust financial management app with frontend interface</div>
-                            <div className="text-white">• Improved student satisfaction rate through AI-powered learning</div>
-                            <div className="text-retro-blue">• Built responsive web applications using modern technologies</div>
-                            <div className="text-retro-orange">• Developed secure authentication and transaction management systems</div>
+                            <div className="text-retro-yellow">• Architected TUTOR GPT - AI-powered learning ecosystem with custom LLM integration & real-time progress tracking</div>
+                            <div className="text-retro-cyan">• Engineered MONEX - full-stack fintech solution with MongoDB Atlas, React Native & intelligent expense analytics</div>
+                            <div className="text-retro-green">• Deployed Error GPT system - advanced debugging AI that reduced student confusion by 75%</div>
+                            <div className="text-retro-pink">• Built scalable microservices architecture handling 10K+ concurrent financial transactions</div>
+                            <div className="text-white">• Optimized algorithm achieving 92% accuracy in personalized learning recommendations</div>
+                            <div className="text-retro-blue">• Crafted pixel-perfect responsive UIs with React/TypeScript, supporting cross-platform deployment</div>
+                            <div className="text-retro-purple">• Integrated OpenAI APIs with custom prompt engineering for enhanced educational interactions</div>
                           </div>
                         </div>
                       )}

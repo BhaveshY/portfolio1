@@ -114,9 +114,9 @@ const Navbar = () => {
           data-cursor="Home"
         >
           <span className="relative z-10 inline-block pixel-text">
-            <span className="text-retro-cyan glitch-text">ALEX</span>
+            <span className="text-retro-cyan glitch-text">Bhavesh</span>
             <span className="text-retro-pink">{showCursor ? '_' : ''}</span>
-            <span className="text-retro-green">CHEN</span>
+            <span className="text-retro-green">Yeole</span>
           </span>
           <motion.span 
             className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-retro-cyan via-retro-pink to-retro-green"

@@ -88,8 +88,8 @@ const Contact = () => {
                   </div>
                   <div className="visual-hierarchy">
                     <p className="text-retro-green text-sm pixel-text">EMAIL</p>
-                    <a href="mailto:alex.chen.dev@example.com" className="text-white hover:text-retro-cyan transition-colors text-sm md:text-base">
-                      alex.chen.dev@example.com
+                    <a href="mailto:byeole88@gmail.com" className="text-white hover:text-retro-cyan transition-colors text-sm md:text-base">
+                      byeole88@gmail.com
                     </a>
                   </div>
                 </div>
@@ -101,8 +101,8 @@ const Contact = () => {
                   </div>
                   <div className="visual-hierarchy">
                     <p className="text-retro-green text-sm pixel-text">PHONE</p>
-                    <a href="tel:+1234567890" className="text-white hover:text-retro-pink transition-colors text-sm md:text-base">
-                      +1 (234) 567-8900
+                    <a href="tel:+4915560050418" className="text-white hover:text-retro-pink transition-colors text-sm md:text-base">
+                      +49 15560050418
                     </a>
                   </div>
                 </div>
@@ -114,7 +114,7 @@ const Contact = () => {
                   </div>
                   <div className="visual-hierarchy">
                     <p className="text-retro-green text-sm pixel-text">LOCATION</p>
-                    <p className="text-white text-sm md:text-base">San Francisco, CA</p>
+                    <p className="text-white text-sm md:text-base">Magdeburg, Germany</p>
                     <p className="text-white/60 text-xs">Available for Remote Work</p>
                   </div>
                 </div>
@@ -126,8 +126,7 @@ const Contact = () => {
                   </div>
                   <div className="visual-hierarchy">
                     <p className="text-retro-green text-sm pixel-text">TIMEZONE</p>
-                    <p className="text-white text-sm md:text-base">PST (GMT-8)</p>
-                    <p className="text-white/60 text-xs">Usually respond within 24h</p>
+                    <p className="text-white text-sm md:text-base">CET (GMT+1)</p>
                   </div>
                 </div>
                 
@@ -140,14 +139,9 @@ const Contact = () => {
                     <p className="text-retro-green text-sm pixel-text">CONNECT</p>
                     <div className="retro-grid retro-grid-2 lg:grid-cols-4">
                       {[
-                        { name: 'github', icon: 'GH', color: 'retro-cyan', url: 'https://github.com/alexchen' },
-                        { name: 'linkedin', icon: 'LI', color: 'retro-blue', url: 'https://linkedin.com/in/alexchen' },
-                        { name: 'twitter', icon: 'TW', color: 'retro-pink', url: 'https://twitter.com/alexchen' },
-                        { name: 'stackoverflow', icon: 'SO', color: 'retro-orange', url: 'https://stackoverflow.com/users/alexchen' },
-                        { name: 'medium', icon: 'MD', color: 'retro-green', url: 'https://medium.com/@alexchen' },
-                        { name: 'dev.to', icon: 'DV', color: 'retro-purple', url: 'https://dev.to/alexchen' },
-                        { name: 'discord', icon: 'DC', color: 'retro-blue', url: 'https://discord.gg/alexchen' },
-                        { name: 'youtube', icon: 'YT', color: 'retro-red', url: 'https://youtube.com/@alexchen' }
+                        { name: 'github', icon: 'GH', color: 'retro-cyan', url: 'https://github.com/BhaveshY' },
+                        { name: 'linkedin', icon: 'LI', color: 'retro-blue', url: 'https://www.linkedin.com/in/bhavesh-yeole-a46558159/' },
+                        { name: 'email', icon: 'GM', color: 'retro-green', url: 'mailto:byeole88@gmail.com' }
                       ].map((social) => (
                         <a 
                           key={social.name}

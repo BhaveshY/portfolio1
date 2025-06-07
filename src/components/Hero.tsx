@@ -7,6 +7,23 @@ import { motion } from 'framer-motion';
 // Define AnimatedSprite OUTSIDE of Hero
 const AnimatedSprite = ({ frameCount, frameDuration }: { frameCount: number, frameDuration: number }) => {
   const [frame, setFrame] = useState(0); // Reset to 0 for initial frame
+  const [clickCount, setClickCount] = useState(0);
+  const [showBubble, setShowBubble] = useState(false);
+  const [currentMessage, setCurrentMessage] = useState('');
+
+  const messages = [
+    "Hey, welcome to my portfolio! 👋",
+    "Nice to see you're interested! 😊",
+    "Still clicking me? That's.. dedication 🤔",
+    "Okay, you can stop now.. 😅",
+    "Seriously? I'm trying to work here! 😤",
+    "This is getting ridiculous..",
+    "STOP CLICKING ME! 😠",
+    "Fine... I give up. Click away.. 😑",
+    "You're persistent, I'll give you that.. 🤦‍♂️",
+    "Now you're just being mean! 😢"
+  ];
+
   useEffect(() => {
     const interval = setInterval(() => {
       setFrame(f => (f + 1) % frameCount);
@@ -14,20 +31,75 @@ const AnimatedSprite = ({ frameCount, frameDuration }: { frameCount: number, fra
     return () => clearInterval(interval);
   }, [frameCount, frameDuration]);
 
+  const handleClick = () => {
+    const messageIndex = Math.min(clickCount, messages.length - 1);
+    setCurrentMessage(messages[messageIndex]);
+    setShowBubble(true);
+    setClickCount(prev => prev + 1);
+
+    // Auto-hide bubble after 3 seconds
+    setTimeout(() => {
+      setShowBubble(false);
+    }, 3000);
+  };
+
   return (
-    <div
-      aria-hidden="true"
-      className="w-12 h-24 md:w-16 md:h-32 lg:w-20 lg:h-40 flex-shrink-0"
-      style={{ width: '66px', height: '132px' }} // Keep the working inline style for size for now
-    >
-      <img
-        src={`/frame-${frame + 1}.PNG`}
-        alt=""
-        className="w-full h-full object-contain"
-        style={{
-          imageRendering: 'pixelated',
-        }}
-      />
+    <div className="relative">
+      {/* Speech Bubble */}
+      {showBubble && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, y: 5 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.9, y: 5 }}
+          transition={{ duration: 0.2 }}
+          className="absolute left-1/2 -translate-x-1/2 z-50"
+          style={{ bottom: '135px' }} // Position bubble above the character sprite
+        >
+          <div className="relative bg-white text-black rounded-md shadow-lg border-2 border-black p-1">
+            <div className="pixel-text text-center" style={{ fontSize: '10px', lineHeight: '1.2', maxWidth: '120px' }}>
+              {currentMessage}
+            </div>
+            {/* Speech bubble arrow with border */}
+            <div // Arrow Border
+              className="absolute w-0 h-0 -translate-x-1/2"
+              style={{
+                top: '100%',
+                left: '50%',
+                borderTop: '8px solid black',
+                borderLeft: '8px solid transparent',
+                borderRight: '8px solid transparent',
+              }}
+            />
+            <div // Arrow Fill
+              className="absolute w-0 h-0 -translate-x-1/2"
+              style={{
+                top: 'calc(100% - 2px)',
+                left: '50%',
+                borderTop: '6px solid white',
+                borderLeft: '6px solid transparent',
+                borderRight: '6px solid transparent',
+              }}
+            />
+          </div>
+        </motion.div>
+      )}
+      
+      {/* Character Sprite */}
+      <div
+        onClick={handleClick}
+        aria-hidden="true"
+        className="w-12 h-24 md:w-16 md:h-32 lg:w-20 lg:h-40 flex-shrink-0 cursor-pointer hover:scale-110 transition-transform duration-200"
+        style={{ width: '66px', height: '132px' }} // Keep the working inline style for size for now
+      >
+        <img
+          src={`/frame-${frame + 1}.PNG`}
+          alt="Interactive character"
+          className="w-full h-full object-contain"
+          style={{
+            imageRendering: 'pixelated',
+          }}
+        />
+      </div>
     </div>
   );
 };
@@ -78,27 +150,20 @@ const Hero = () => {
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="retro-grid retro-grid-2 items-center min-h-[80vh] gap-8 md:gap-12">
           {/* Text content */}
-          <div className="order-2 md:order-1 visual-hierarchy">
+          <div className="order-2 md:order-1 visual-hierarchy" style={{ overflow: 'visible' }}>
             <div>
               {/* Main heading with text effects */}
               <div className="flex flex-col items-start" style={{ gap: '4px', marginTop: '48px' }}>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" style={{ marginBottom: '8px' }}>
-                  <span className="text-white glitch-clip block" data-text="Building">Building</span>
-                  <span className="text-retro-pink glitch-clip block" data-text="Digital">Digital</span>
-                  <span className="text-retro-cyan glitch-clip block" data-text="Experiences">Experiences<span className="text-retro-yellow">{showCursor ? '_' : ''}</span></span>
-                </h1>
-                <motion.div
-                  animate={{
-                    x: [0, 100, 0]
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                >
-                  <AnimatedSprite frameCount={2} frameDuration={800} />
-                </motion.div>
+                <div className="flex items-center gap-4 md:gap-6" style={{ animation: 'none', transform: 'none' }}>
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" style={{ marginBottom: '8px', animation: 'none', transform: 'none' }}>
+                    <span className="text-white block">Building</span>
+                    <span className="text-retro-pink block">Digital</span>
+                    <span className="text-retro-cyan block relative">Experiences<span className="text-retro-yellow absolute" style={{ left: '100%' }}>{showCursor ? '_' : ''}</span></span>
+                  </h1>
+                  <div style={{ animation: 'none', transform: 'none' }}>
+                    <AnimatedSprite frameCount={2} frameDuration={800} />
+                  </div>
+                </div>
               </div>
               
               <p className="text-white/90 text-lg max-w-lg mt-4">

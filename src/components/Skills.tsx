@@ -89,7 +89,7 @@ const Skills = ({ skills, darkMode = false }: SkillsProps) => {
           </h2>
           <div className="section-divider"></div>
           <p className="text-white/80 max-w-2xl mx-auto">
-            My technical arsenal spans across full-stack development, machine learning, and data science.
+            My technical arsenal spans across Web Development, Native Development, Machine Learning, LLMs and Data Science.
           </p>
         </div>
         

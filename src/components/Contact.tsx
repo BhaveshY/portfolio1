@@ -7,6 +7,7 @@ const Contact = () => {
   const [showCursor, setShowCursor] = useState(true);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,13 +27,26 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setError('');
     
-    // Simulate form submission
-    setTimeout(() => {
-      setLoading(false);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
       setSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
       
@@ -40,7 +54,12 @@ const Contact = () => {
       setTimeout(() => {
         setSubmitted(false);
       }, 5000);
-    }, 1500);
+
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to send message');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -180,6 +199,13 @@ const Contact = () => {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-section">
+                  {/* Error message */}
+                  {error && (
+                    <div className="p-3 border border-red-500 bg-red-500/10 text-red-400 text-sm pixel-text">
+                      ERROR: {error}
+                    </div>
+                  )}
+                  
                   {/* Name input */}
                   <div className="retro-form-group">
                     <label htmlFor="name" className="retro-form-label">

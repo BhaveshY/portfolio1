@@ -207,7 +207,14 @@ const Hero = () => {
             <div className="text-retro-green pixel-text text-sm mb-2">TECH STACK_</div>
           </div>
           <div className="flex flex-wrap justify-center gap-4 items-center mb-0">
-            {['React', 'Next.js', 'TypeScript', 'Node.js', 'Tailwind', 'MongoDB'].map((tech) => (
+            {[
+              'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'React Native', 
+              'Node.js', 'Tailwind', 'RESTful APIs', 'Python', 'Machine Learning', 'Pandas', 
+              'NumPy', 'Java', 'C++', 'MongoDB', 'SQL', 'Git', 'GitHub', 'Prompt Engineering', 
+              'AI/ML Fine Tuning', 'Generative AI', 'LLM Handling', 'Bug Tracking', 'UI/UX', 
+              'Clean Code', 'Google Cloud', 'SAP SAC', 'SAP S/4HANA', 'MS Office', 
+              'Digital Marketing', 'SEO', 'Graphic Design', 'Canva', 'Photoshop'
+            ].map((tech) => (
               <div 
                 key={tech}
                 className="px-4 py-3 border-retro-standard hover:border-retro-accent text-white text-sm transition-colors digital-noise"

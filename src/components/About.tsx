@@ -198,7 +198,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="pt-4 md:pt-8 pb-8 md:pb-12 px-4 relative overflow-hidden">
+    <section id="about" className="pt-2 md:pt-4 pb-8 md:pb-12 px-4 relative overflow-hidden">
       {/* CRT scanlines overlay */}
       <div className="scanlines-animated fixed inset-0 pointer-events-none z-[5] opacity-15"></div>
       <div className="vhs-tracking fixed inset-0 pointer-events-none z-[4] opacity-10"></div>

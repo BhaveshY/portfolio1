@@ -70,7 +70,7 @@ const Hero = () => {
   // AnimatedSprite component is NO LONGER defined here
   
   return (
-    <section id="home" className="section-padding relative flex items-center bg-indigo-950/30 backdrop-blur-sm min-h-[70vh]">
+    <section id="home" className="pt-8 md:pt-12 lg:pt-16 pb-4 px-4 relative flex items-center bg-indigo-950/30 backdrop-blur-sm min-h-[70vh]">
       {/* Background grid and effects */}
       <div className="absolute inset-0 retro-grid-bg opacity-10 z-0"></div>
       <div className="absolute inset-0 crt-blue-tint z-0"></div>
@@ -120,21 +120,6 @@ const Hero = () => {
                 >
                   <span className="pixel-text">CONTACT ME</span>
                 </Link>
-              </div>
-              
-              {/* Tech stack icons */}
-              <div>
-                <div className="text-retro-green pixel-text text-sm mb-3">TECH STACK_</div>
-                <div className="flex flex-wrap gap-3 items-center">
-                  {['React', 'Next.js', 'TypeScript', 'Node.js', 'Tailwind', 'MongoDB'].map((tech) => (
-                    <div 
-                      key={tech}
-                      className="px-3 py-2 border-retro-standard hover:border-retro-accent text-white text-sm transition-colors digital-noise"
-                    >
-                      {tech}
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
           </div>
@@ -189,14 +174,14 @@ const Hero = () => {
                     {currentLine >= lines.length && (
                       <div className="mt-6 border-retro-standard p-3 bg-black/50 pixelated-overlay">
                         <div className="text-retro-yellow pixel-text text-xs mb-2">PROFILE</div>
-                        <div className="retro-grid retro-grid-2 gap-2 text-xs">
+                        <div className="space-y-1 text-xs">
                           <div>
                             <span className="text-retro-cyan">Name:</span> 
                             <span className="text-white ml-2">Alex Chen</span>
                           </div>
                           <div>
                             <span className="text-retro-cyan">Role:</span> 
-                            <span className="text-white ml-2">Developer</span>
+                            <span className="text-white ml-2">Full-Stack Developer</span>
                           </div>
                           <div>
                             <span className="text-retro-cyan">Status:</span> 
@@ -215,6 +200,23 @@ const Hero = () => {
             </div>
           </div>
         </div>
+        
+        {/* Tech stack - Full width section */}
+          <div style={{marginTop: '14px'}}></div>
+          <div className="text-center mb-2">
+            <div className="text-retro-green pixel-text text-sm mb-2">TECH STACK_</div>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 items-center mb-0">
+            {['React', 'Next.js', 'TypeScript', 'Node.js', 'Tailwind', 'MongoDB'].map((tech) => (
+              <div 
+                key={tech}
+                className="px-4 py-3 border-retro-standard hover:border-retro-accent text-white text-sm transition-colors digital-noise"
+              >
+                {tech}
+              </div>
+            ))}
+          </div>
+
       </div>
     </section>
   );

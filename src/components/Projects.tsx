@@ -44,116 +44,26 @@ const Projects = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Simulated project data - expanded with more comprehensive projects
+  // Bhavesh's real projects from resume
   const projects: Project[] = [
     {
       id: 1,
-      title: "RETRO GAME EMULATOR",
-      description: "A web-based emulator for classic 8-bit games with pixel-perfect graphics and authentic sound. Built with WebAssembly for optimal performance. Supports multiple game formats and includes save states, speed controls, and custom shaders.",
-      tags: ["React", "WebAssembly", "JavaScript", "Canvas API"],
-      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMDAyMjQ0Ii8+PGNpcmNsZSBjeD0iMjUwIiBjeT0iMTUwIiByPSI0MCIgZmlsbD0iIzAwZmZmZiIvPjx0ZXh0IHg9IjUwJSIgeT0iNzAlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE2IiBmaWxsPSIjMDBmZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5SRVRSTyBHQU1FPC90ZXh0Pjx0ZXh0IHg9IjUwJSIgeT0iODUlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZmY0NDY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5FTVVMQVRPUjwvdGV4dD48L3N2Zz4=",
-      link: "https://example.com/project1",
-      githubLink: "https://github.com/yourusername/retro-emulator"
+      title: "TUTOR GPT",
+      description: "An interactive tutoring platform utilizing Generative AI to deliver personalized tutoring through advanced language models, enhancing learner engagement with focus on user-centered design. Features robust Error GPT that tracks user progress and custom evaluation metrics for improved student satisfaction.",
+      tags: ["Generative AI", "Machine Learning", "React", "JavaScript", "HTML", "CSS", "TypeScript", "Javascript", ],
+      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTEwMDMzIi8+PGNpcmNsZSBjeD0iMjUwIiBjeT0iMTIwIiByPSI0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZlZjAwIiBzdHJva2Utd2lkdGg9IjMiLz48cGF0aCBkPSJNIDIwMCAxMDAgTCAzMDAgMTAwIEwgMzAwIDEwNSBMIDIwMCAxMDUgWiIgZmlsbD0iIzAwZmZmZiIvPjxwYXRoIGQ9Ik0gMjEwIDEyMCBMIDI5MCAxMjAgTCAyOTAgMTI1IEwgMjEwIDEyNSBaIiBmaWxsPSIjZmY0NDY2Ii8+PHBhdGggZD0iTSAyMjAgMTQwIEwgMjgwIDE0MCBMIDI4MCAxNDUgTCAyMjAgMTQ1IFoiIGZpbGw9IiNmZmVmMDAiLz48dGV4dCB4PSI1MCUiIHk9Ijc1JSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZmZWYwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VFVUT1IgR1BUPC90ZXh0Pjx0ZXh0IHg9IjUwJSIgeT0iOTAlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjMDBmZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BSSBUVVRPUklORzwvdGV4dD48L3N2Zz4=",
+      link: "https://github.com/Bhaveshytutor-xmwj/tree/main",
+      githubLink: "https://github.com/Bhaveshytutor-xmwj/tree/main"
     },
     {
       id: 2,
-      title: "NEURAL NETWORK VISUALIZER",
-      description: "Interactive visualization tool for neural networks. Users can create, train and test simple neural networks directly in the browser. Features real-time training visualization, adjustable network architecture, and dataset import capabilities.",
-      tags: ["TypeScript", "D3.js", "TensorFlow.js", "React"],
-      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjNDQwMDQ0Ii8+PGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSIyMCIgZmlsbD0iI2ZmZmYwMCIvPjxjaXJjbGUgY3g9IjI1MCIgY3k9IjEwMCIgcj0iMjAiIGZpbGw9IiNmZmZmMDAiLz48Y2lyY2xlIGN4PSI0MDAiIGN5PSIxMDAiIHI9IjIwIiBmaWxsPSIjZmZmZjAwIi8+PGxpbmUgeDE9IjEyMCIgeTE9IjEwMCIgeDI9IjIzMCIgeTI9IjEwMCIgc3Ryb2tlPSIjMDBmZmZmIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMjcwIiB5MT0iMTAwIiB4Mj0iMzgwIiB5Mj0iMTAwIiBzdHJva2U9IiMwMGZmZmYiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNzAlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZmZmZjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5ORVVSQUwgTkVUV09SSzwvdGV4dD48dGV4dCB4PSI1MCUiIHk9Ijg1JSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzAwZmZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VklTVUFMSVpFUjwvdGV4dD48L3N2Zz4=",
-      link: "https://example.com/project2",
-      githubLink: "https://github.com/yourusername/neural-viz"
+      title: "MONEX - EXPENSE MANAGEMENT",
+      description: "A comprehensive finance management application designed to minimize financial worries utilizing JavaScript, React Native, and MongoDB. Features an integrated JavaScript-powered interface for general user queries and responsive frontend for tracking and managing transactions using modern web technologies.",
+      tags: ["React Native", "JavaScript", "MongoDB", "Node.js", "HTML", "CSS", "Typescript", "API", "LLM"],
+      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMDAzMzExIi8+PGNpcmNsZSBjeD0iMjAwIiBjeT0iMTIwIiByPSI0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZlZjAwIiBzdHJva2Utd2lkdGg9IjMiLz48dGV4dCB4PSIyMDAiIHk9IjEyNSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIyMCIgZmlsbD0iI2ZmZWYwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+JDwvdGV4dD48cGF0aCBkPSJNIDI4MCA4MCBMIDI5MCA4MCBMIDMwMCA5MCBMIDM1MCA5MCBMIDM1MCA5NSBMIDMwMCA5NSBMIDI5MCA5NSBMIDI4MCA5NSBaIiBmaWxsPSIjMDBmZjY2Ii8+PHBhdGggZD0iTSAyODAgMTEwIEwgMjkwIDExMCBMIDMwMCAxMTAgTCAzMDAgMTE1IEwgMjkwIDExNSBMIDI4MCAxMTUgWiIgZmlsbD0iI2ZmNDQ2NiIvPjxwYXRoIGQ9Ik0gMjgwIDEzMCBMIDI5MCAxMzAgTCAzMDUgMTMwIEwgMzA1IDEzNSBMIDI5MCAxMzUgTCAyODAgMTM1IFoiIGZpbGw9IiNmZjQ0NjYiLz48cGF0aCBkPSJNIDI4MCAxNTAgTCAzMjAgMTUwIEwgMzIwIDE1NSBMIDI4MCAxNTUgWiIgZmlsbD0iIzAwZmY2NiIvPjx0ZXh0IHg9IjUwJSIgeT0iNzUlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZmZlZjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5NT05FWDwvdGV4dD48dGV4dCB4PSI1MCUiIHk9IjkwJSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzAwZmZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RklOQU5DRSBBUFA8L3RleHQ+PC9zdmc+",
+      link: "https://github.com/Bhaveshyfmonexfront",
+      githubLink: "https://github.com/Bhaveshyfmonexfront"
     },
-    {
-      id: 3,
-      title: "CYBERPUNK WEATHER APP",
-      description: "A weather application with a retro-futuristic cyberpunk interface. Provides real-time weather data with unique visualizations, 7-day forecasts, and atmospheric particle effects that respond to weather conditions.",
-      tags: ["Next.js", "API", "CSS", "TypeScript"],
-      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMjIwMDU1Ii8+PHBvbHlnb24gcG9pbnRzPSIyMDAsMTAwIDI2MCw2MCAzMDAsMTAwIDI2MCwxNDAiIGZpbGw9IiNmZjQ0NjYiLz48cG9seWdvbiBwb2ludHM9IjE1MCwxODAgMTgwLDE0MCAyMTAsMTgwIDE4MCwyMjAiIGZpbGw9IiMwMGZmZmYiLz48dGV4dCB4PSI1MCUiIHk9IjcwJSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZmNDQ2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q1lCRVJQVU5LPC90ZXh0Pjx0ZXh0IHg9IjUwJSIgeT0iODUlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjMDBmZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5XRUFUSEVSIEFQUEM8L3RleHQ+PC9zdmc+",
-      link: "https://example.com/project3",
-      githubLink: "https://github.com/yourusername/cyberpunk-weather"
-    },
-    {
-      id: 4,
-      title: "QUANTUM ALGORITHM SIMULATOR",
-      description: "Educational tool that simulates basic quantum algorithms and visualizes quantum states and operations. Includes Shor's algorithm, Grover's search, and quantum teleportation with interactive 3D visualizations.",
-      tags: ["Python", "React", "Three.js", "WebGL"],
-      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTEwMDMzIi8+PGNpcmNsZSBjeD0iMjUwIiBjeT0iMTUwIiByPSI2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZlZjAwIiBzdHJva2Utd2lkdGg9IjMiLz48Y2lyY2xlIGN4PSIyNTAiIGN5PSIxNTAiIHI9IjMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmVmMDAiIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9IjI1MCIgY3k9IjE1MCIgcj0iMTAiIGZpbGw9IiNmZmVmMDAiLz48dGV4dCB4PSI1MCUiIHk9Ijc1JSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZmZWYwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UVVBTVRVTSBBTEEDPC90ZXh0Pjx0ZXh0IHg9IjUwJSIgeT0iOTAlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjMDBmZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TSU1VTEFUT1I8L3RleHQ+PC9zdmc+",
-      link: "https://example.com/project4",
-      githubLink: "https://github.com/yourusername/quantum-sim"
-    },
-    {
-      id: 5,
-      title: "PIXEL ART CREATOR",
-      description: "Browser-based pixel art creator with export options, animation capabilities, and a community gallery. Features layer support, color palettes, onion skinning, and collaborative editing.",
-      tags: ["JavaScript", "Canvas", "Firebase", "CSS"],
-      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMDAzMzAwIi8+PHJlY3QgeD0iMTgwIiB5PSI5MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjZmYwMDAwIi8+PHJlY3QgeD0iMjAwIiB5PSI5MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjMDBmZjAwIi8+PHJlY3QgeD0iMjIwIiB5PSI5MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjMDA2NmZmIi8+PHJlY3QgeD0iMjQwIiB5PSI5MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjZmZmZjAwIi8+PHJlY3QgeD0iMjYwIiB5PSI5MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjZmYwMGZmIi8+PHJlY3QgeD0iMjgwIiB5PSI5MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjMDBmZmZmIi8+PHRleHQgeD0iNTAlIiB5PSI3NSUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMwMGZmMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlBJWEVMIEFSVDwvdGV4dD48dGV4dCB4PSI1MCUiIHk9IjkwJSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzAwZmZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q1JFQVRPUjwvdGV4dD48L3N2Zz4=",
-      link: "https://example.com/project5",
-      githubLink: "https://github.com/yourusername/pixel-creator"
-    },
-    {
-      id: 6,
-      title: "SYNTHWAVE MUSIC GENERATOR",
-      description: "AI-powered tool that generates synthwave music based on parameters like tempo, mood, and instrumentation. Uses machine learning to create authentic 80s-style compositions with customizable synthesizer settings.",
-      tags: ["TensorFlow", "Web Audio API", "React", "Node.js"],
-      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTEwMDIyIi8+PHBhdGggZD0iTSAxMDAgMjAwIEwgMTUwIDEwMCBMIDIwMCAxNTAgTCAyNTAgODAgTCAzMDAgMTIwIEwgMzUwIDYwIEwgNDAwIDE2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmY0NDY2IiBzdHJva2Utd2lkdGg9IjMiLz48cGF0aCBkPSJNIDEwMCAyMjAgTCAxNTAgMTIwIEwgMjAwIDEcwIEwgMjUwIDEwMCBMIDMwMCAxNDAgTCAzNTAgODAgTCA0MDAgMTgwIiBmaWxsPSIjZmY0NDY2IiBzdHJva2U9IiMwMGZmZmYiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNzUlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZmY0NDY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TWU5USFdBUlRFPC90ZXh0Pjx0ZXh0IHg9IjUwJSIgeT0iOTAlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjMDBmZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5HRU5FUkFUT1I8L3RleHQ+PC9zdmc+",
-      link: "https://example.com/project6",
-      githubLink: "https://github.com/yourusername/synthwave-gen"
-    },
-    {
-      id: 7,
-      title: "BLOCKCHAIN VOTING SYSTEM",
-      description: "Secure, transparent voting platform built on Ethereum blockchain. Features voter authentication, real-time results, audit trails, and smart contract governance with gas optimization.",
-      tags: ["Solidity", "Web3.js", "React", "Ethereum"],
-      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMDAxMTIyIi8+PHJlY3QgeD0iMTUwIiB5PSI4MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmVmMDAiIHN0cm9rZS13aWR0aD0iMyIvPjxyZWN0IHg9IjI0MCIgeT0iODAiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZlZjAwIiBzdHJva2Utd2lkdGg9IjMiLz48cmVjdCB4PSIzMzAiIHk9IjgwIiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZWYwMCIgc3Ryb2tlLXdpZHRoPSIzIi8+PGxpbmUgeDE9IjIxMCIgeTE9IjExMCIgeDI9IjI0MCIgeTI9IjExMCIgc3Ryb2tlPSIjMDBmZmZmIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMzAwIiB5MT0iMTEwIiB4Mj0iMzMwIiB5Mj0iMTEwIiBzdHJva2U9IiMwMGZmZmYiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNzUlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZmZlZjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CTE9DS0NIQUlOPC90ZXh0Pjx0ZXh0IHg9IjUwJSIgeT0iOTAlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjMDBmZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5WT1RJTkcgU1lTVEVNPC90ZXh0Pjwvc3ZnPg==",
-      link: "https://example.com/project7",
-      githubLink: "https://github.com/yourusername/blockchain-voting"
-    },
-    {
-      id: 8,
-      title: "AR FURNITURE PLACEMENT",
-      description: "Augmented reality mobile app for furniture placement using WebXR and Three.js. Users can visualize furniture in their space before purchasing, with accurate scaling and lighting simulation.",
-      tags: ["WebXR", "Three.js", "React Native", "Computer Vision"],
-      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMjIxMTAwIi8+PGVsbGlwc2UgY3g9IjI1MCIgY3k9IjIwMCIgcng9IjEwMCIgcnk9IjIwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmVmMDAiIHN0cm9rZS13aWR0aD0iMiIvPjxyZWN0IHg9IjIyMCIgeT0iMTMwIiB3aWR0aD0iNjAiIGhlaWdodD0iNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwZmZmZiIgc3Ryb2tlLXdpZHRoPSIzIi8+PHJlY3QgeD0iMjMwIiB5PSIxNDAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzAwNjZmZiIgb3BhY2l0eT0iMC41Ii8+PHRleHQgeD0iNTAlIiB5PSI3NSUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNmZmVmMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFSIEZVUk5JVFVSRTU8L3RleHQ+PHRleHQgeD0iNTAlIiB5PSI5MCUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMwMGZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlBMQUNFTUVOVDwvdGV4dD48L3N2Zz4=",
-      link: "https://example.com/project8",
-      githubLink: "https://github.com/yourusername/ar-furniture"
-    },
-    {
-      id: 9,
-      title: "SOCIAL MEDIA ANALYTICS",
-      description: "Comprehensive social media analytics dashboard with sentiment analysis, trend prediction, and automated reporting. Integrates with multiple platforms and provides AI-driven insights.",
-      tags: ["Python", "React", "NLP", "PostgreSQL"],
-      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMDAyMjMzIi8+PHJlY3QgeD0iMTAwIiB5PSIxNDAiIHdpZHRoPSIzMCIgaGVpZ2h0PSI4MCIgZmlsbD0iIzAwZmZmZiIvPjxyZWN0IHg9IjE1MCIgeT0iMTIwIiB3aWR0aD0iMzAiIGhlaWdodD0iMTAwIiBmaWxsPSIjZmZlZjAwIi8+PHJlY3QgeD0iMjAwIiB5PSIxMDAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIxMjAiIGZpbGw9IiNmZjQ0NjYiLz48cmVjdCB4PSIyNTAiIHk9IjExMCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjExMCIgZmlsbD0iIzAwZmY2NiIvPjxyZWN0IHg9IjMwMCIgeT0iMTMwIiB3aWR0aD0iMzAiIGhlaWdodD0iOTAiIGZpbGw9IiNmZjAwZmYiLz48cmVjdCB4PSIzNTAiIHk9IjEwNSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjExNSIgZmlsbD0iIzAwZmZmZiIvPjx0ZXh0IHg9IjUwJSIgeT0iNzAlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjMDBmZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TT0NJQUwgTUVESUE8L3RleHQ+PHRleHQgeD0iNTAlIiB5PSI4NSUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNmZmVmMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFOQUxZVElDUzwvdGV4dD48L3N2Zz4=",
-      link: "https://example.com/project9",
-      githubLink: "https://github.com/yourusername/social-analytics"
-    },
-    {
-      id: 10,
-      title: "VOICE-CONTROLLED IDE",
-      description: "Revolutionary code editor controlled entirely by voice commands. Features natural language programming, voice-to-code translation, and accessibility-first design for developers with disabilities.",
-      tags: ["Electron", "Speech Recognition", "Monaco Editor", "Python"],
-      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTEwMDExIi8+PGNpcmNsZSBjeD0iMjAwIiBjeT0iMTIwIiByPSI0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmY0NDY2IiBzdHJva2Utd2lkdGg9IjMiLz48Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMjAiIHI9IjI1IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZjQ0NjYiIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9IjIwMCIgY3k9IjEyMCIgcj0iMTAiIGZpbGw9IiNmZjQ0NjYiLz48cGF0aCBkPSJNIDI1MCA5MCBMIDM1MCA5MCBMIDM1MCA5NSBMIDI1MCA5NSBaIiBmaWxsPSIjMDBmZmZmIi8+PHBhdGggZD0iTSAyNTAgMTEwIEwgMzAwIDExMCBMIDMwMCAxMTUgTCAyNTAgMTE1IFoiIGZpbGw9IiMwMGZmZmYiLz48cGF0aCBkPSJNIDI1MCAxMzAgTCAzODAgMTMwIEwgMzgwIDEzNSBMIDI5MCAxMzUgTCAyODAgMTM1IFoiIGZpbGw9IiIzMDAwMDAiLz48cGF0aCBkPSJNIDI1MCAxNTAgTCAyODAgMTUwIEwgMjgwIDE1NSBMIDI1MCAxNTUgWiIgZmlsbD0iIzAwMDAwMCIvPjx0ZXh0IHg9IjUwJSIgeT0iNzUlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZmY0NDY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5WUklFU1QgSUQ8L3RleHQ+PHRleHQgeD0iNTAlIiB5PSI5MCUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMwMGZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNPUlRST0w8L3RleHQ+PC9zdmc+",
-      link: "https://example.com/project10",
-      githubLink: "https://github.com/yourusername/voice-ide"
-    },
-    {
-      id: 11,
-      title: "CRYPTO TRADING BOT",
-      description: "Automated cryptocurrency trading bot with machine learning-based prediction algorithms. Features backtesting, risk management, portfolio optimization, and real-time market analysis.",
-      tags: ["Python", "Machine Learning", "API", "Docker"],
-      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMDAzMzExIi8+PGNpcmNsZSBjeD0iMjAwIiBjeT0iMTIwIiByPSI0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZlZjAwIiBzdHJva2Utd2lkdGg9IjMiLz48dGV4dCB4PSIyMDAiIHk9IjEyNSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIyMCIgZmlsbD0iI2ZmZWYwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QjwvdGV4dD48cGF0aCBkPSJNIDI4MCA4MCBMIDI5MCA4MCBMIDMwMCA5MCBMIDM1MCA5MCBMIDM1MCA5NSBMIDMwMCA5NSBMIDI5MCA5NSBMIDI4MCA5NSBaIiBmaWxsPSIjMDBmZjY2Ii8+PHBhdGggZD0iTSAyODAgMTEwIEwgMjkwIDExMCBMIDMwMCAxMTAgTCAzMDAgMTE1IEwgMjkwIDExNSBMIDI4MCAxMTUgWiIgZmlsbD0iI2ZmNDQ2NiIvPjxwYXRoIGQ9Ik0gMjgwIDEzMCBMIDI5MCAxMzAgTCAzMDUgMTMwIEwgMzA1IDEzNSBMIDI5MCAxMzUgTCAyODAgMTM1IFoiIGZpbGw9IiNmZjQ0NjYiLz48cGF0aCBkPSJNIDI4MCAxNTAgTCAzMjAgMTUwIEwgMzIwIDE1NSBMIDI4MCAxNTUgWiIgZmlsbD0iIzAwZjY2Ii8+PHRleHQgeD0iNTAlIiB5PSI3NSUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNmZmVmMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNSRVRPIFRSQURJTkc8L3RleHQ+PHRleHQgeD0iNTAlIiB5PSI5MCUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMwMGZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkJPVDwvdGV4dD48L3N2Zz4=",
-      link: "https://example.com/project11",
-      githubLink: "https://github.com/yourusername/crypto-bot"
-    },
-    {
-      id: 12,
-      title: "VR COLLABORATION SPACE",
-      description: "Virtual reality workspace for remote team collaboration. Features 3D whiteboards, spatial audio, hand tracking, and integration with popular productivity tools. Built for cross-platform VR headsets.",
-      tags: ["WebXR", "Three.js", "WebRTC", "Node.js"],
-      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMDAxMzMzIi8+PGVsbGlwc2UgY3g9IjI1MCIgY3k9IjE1MCIgcng9IjEwMCIgcnk9IjYwIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMGZmZmYiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC43Ii8+PGVsbGlwc2UgY3g9IjI1MCIgY3k9IjE1MCIgcng9IjcwIiByeT0iNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmNDQ2NiIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjciLz48Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMjAiIHI9IjEwIiBmaWxsPSIjZmZlZjAwIi8+PGNpcmNsZSBjeD0iMzAwIiBjeT0iMTIwIiByPSIxMCIgZmlsbD0iI2ZmZWYwMCIvPjxjaXJjbGUgY3g9IjI1MCIgY3k9IjE4MCIgcj0iMTAiIGZpbGw9IiNmZmVmMDAiLz48dGV4dCB4PSI1MCUiIHk9Ijc1JSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzAwZmZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VlIgQ09MTEFCPC90ZXh0Pjx0ZXh0IHg9IjUwJSIgeT0iOTAlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZmY0NDY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TUEFDRTwvdGV4dD48L3N2Zz4=",
-      link: "https://example.com/project12",
-      githubLink: "https://github.com/yourusername/vr-collab"
-    }
   ];
 
   // All unique tags across projects

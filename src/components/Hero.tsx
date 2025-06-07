@@ -76,13 +76,13 @@ const Hero = () => {
       <div className="absolute inset-0 crt-blue-tint z-0"></div>
       
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="retro-grid retro-grid-2 items-center min-h-[80vh]">
+        <div className="retro-grid retro-grid-2 items-center min-h-[80vh] gap-8 md:gap-12">
           {/* Text content */}
           <div className="order-2 md:order-1 visual-hierarchy">
             <div>
               {/* Main heading with text effects */}
-              <div className="flex flex-col items-start gap-4">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <div className="flex flex-col items-start" style={{ gap: '4px', marginTop: '48px' }}>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" style={{ marginBottom: '8px' }}>
                   <span className="text-white glitch-clip block" data-text="Building">Building</span>
                   <span className="text-retro-pink glitch-clip block" data-text="Digital">Digital</span>
                   <span className="text-retro-cyan glitch-clip block" data-text="Experiences">Experiences<span className="text-retro-yellow">{showCursor ? '_' : ''}</span></span>
@@ -101,7 +101,7 @@ const Hero = () => {
                 </motion.div>
               </div>
               
-              <p className="text-white/90 text-lg max-w-lg">
+              <p className="text-white/90 text-lg max-w-lg mt-4">
                 I create innovative web applications with clean code and engaging user experiences, transforming ideas into digital reality.
               </p>
               
@@ -127,7 +127,7 @@ const Hero = () => {
           {/* Terminal/Visual element */}
           <div className="order-1 md:order-2 flex flex-col items-center justify-center">
             {/* Developer Badge - moved above terminal */}
-            <div className="content-spacing">
+            <div className="mb-4">
               <div className="inline-block px-4 py-2 border-retro-standard bg-retro-cyan/10 text-retro-cyan text-sm pixel-text pixel-shadow">
                 FULL-STACK DEVELOPER
               </div>
@@ -177,7 +177,7 @@ const Hero = () => {
                         <div className="space-y-1 text-xs">
                           <div>
                             <span className="text-retro-cyan">Name:</span> 
-                            <span className="text-white ml-2">Alex Chen</span>
+                            <span className="text-white ml-2">Bhavesh Sharad Yeole</span>
                           </div>
                           <div>
                             <span className="text-retro-cyan">Role:</span> 
@@ -189,7 +189,7 @@ const Hero = () => {
                           </div>
                           <div>
                             <span className="text-retro-cyan">Location:</span> 
-                            <span className="text-white ml-2">San Francisco</span>
+                            <span className="text-white ml-2">Magdeburg, Germany</span>
                           </div>
                         </div>
                       </div>

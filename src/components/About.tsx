@@ -100,19 +100,19 @@ const About = () => {
                       {index === 0 && (
                         <div className="pl-4 text-white space-y-4 mb-6 animate-fade-in visual-hierarchy">
                           <p>
-                            Hello! I'm Alex Chen, a Full-Stack Developer and Data Scientist with 7+ years of experience 
-                            building scalable web applications and developing machine learning models that solve real-world 
-                            business problems. I specialize in modern web technologies, cloud architectures, and AI/ML solutions.
+                            Hello! I'm Bhavesh Sharad Yeole, a Computer Science graduate currently pursuing my Master's in Data and Knowledge Engineering. 
+                            I have a strong programming foundation and experience with Full-Stack Software Development, LLMs, and Generative AI. 
+                            I'm eager to leverage my knowledge in innovative projects and cutting-edge technologies.
                           </p>
                           <p>
-                            My journey began with a Master's degree in Computer Science, specializing in Artificial Intelligence 
-                            and Machine Learning. I've since worked with Fortune 500 companies and innovative startups, 
-                            delivering end-to-end solutions from data pipeline design to production deployment.
+                            My journey began with a Bachelor's degree in Computer Engineering, and I'm now specializing in Data and Knowledge Engineering 
+                            at Otto Von Guericke University in Magdeburg, Germany. I've gained hands-on experience through internships in digital marketing, 
+                            web development, and React Native app development.
                           </p>
                           <p>
-                            Currently, I'm passionate about building intelligent applications that combine cutting-edge 
-                            frontend technologies with robust backend systems and ML capabilities. I thrive on solving 
-                            complex technical challenges and creating user experiences that make a meaningful impact.
+                            Currently, I'm passionate about building modern web applications using React Native, integrating advanced features, 
+                            and creating efficient user interfaces. I thrive on learning new technologies and solving complex problems 
+                            in software development and data engineering.
                           </p>
                         </div>
                       )}
@@ -121,12 +121,12 @@ const About = () => {
                         <div className="pl-4 text-white animate-fade-in space-y-3">
                           <div className="text-retro-cyan text-sm mb-3">📁 Recent Experience:</div>
                           <div className="space-y-2 text-xs">
-                            <div className="text-retro-green">├── 2022-Present: Senior Full-Stack Developer @ TechCorp</div>
-                            <div className="text-retro-green">│   └── Led team of 6 developers, 40% performance improvement</div>
-                            <div className="text-retro-cyan">├── 2020-2022: Data Scientist @ AI Innovations Inc.</div>
-                            <div className="text-retro-cyan">│   └── Deployed ML models serving 10M+ users daily</div>
-                            <div className="text-retro-pink">└── 2019-2020: Frontend Developer @ StartupXYZ</div>
-                            <div className="text-retro-pink">    └── Built React apps with 50% faster load times</div>
+                            <div className="text-retro-green">├── Aug-Dec 2024: Working Student in React Native @UniNow GmbH</div>
+                            <div className="text-retro-green">│   └── Utilized UML framework to streamline app features and refactor legacy code</div>
+                            <div className="text-retro-cyan">├── Apr-Jul 2021: Digital Marketing Intern @ Acquaint Consultants</div>
+                            <div className="text-retro-cyan">│   └── Executed SEO strategies using analytics tools, increasing page traffic by 25%</div>
+                            <div className="text-retro-pink">└── Jan-Mar 2022: Fullstack Web Developer Intern @ V3 Data Solutions</div>
+                            <div className="text-retro-pink">    └── Developed and tested a complete web-based booking system using Django, HTML, and CSS</div>
                           </div>
                         </div>
                       )}
@@ -135,13 +135,14 @@ const About = () => {
                         <div className="pl-4 text-white animate-fade-in space-y-3">
                           <div className="text-retro-yellow text-sm mb-3">🎓 Education & Certifications:</div>
                           <div className="space-y-2 text-xs">
-                            <div className="text-white">• M.S. Computer Science - Stanford University (2019)</div>
-                            <div className="text-white">  Specialization: AI/ML, GPA: 3.9/4.0</div>
-                            <div className="text-white">• B.S. Software Engineering - UC Berkeley (2017)</div>
-                            <div className="text-white">  Magna Cum Laude, Dean's List</div>
-                            <div className="text-retro-cyan">• AWS Solutions Architect Professional</div>
-                            <div className="text-retro-green">• Google Cloud Professional ML Engineer</div>
-                            <div className="text-retro-pink">• Microsoft Azure AI Engineer Associate</div>
+                            <div className="text-white">• M.S. Data & Knowledge Engineering - Otto Von Guericke University, Magdeburg (Present)</div>
+                            <div className="text-white">  Focus: Data Science, Machine Learning, Knowledge Systems</div>
+                            <div className="text-white">• B.E. Computer Engineering - Savitribai Phule Pune University, Pune (2023)</div>
+                            <div className="text-white">  Grade: 9.3/10, Maharashtra, India</div>
+                            <div className="text-retro-cyan">• Meta- Introduction to Front-End Development</div>
+                            <div className="text-retro-green">• Machine Learning- From Basics to Advanced</div>
+                            <div className="text-white">• Diploma in Information Technology - Government Polytechnic, Nashik (2020)</div>
+                            <div className="text-white">  Grade: 83.63%, Maharashtra, India</div>
                           </div>
                         </div>
                       )}
@@ -150,13 +151,13 @@ const About = () => {
                         <div className="pl-4 text-white animate-fade-in space-y-3">
                           <div className="text-retro-magenta text-sm mb-3">🏆 Key Achievements:</div>
                           <div className="space-y-2 text-xs">
-                            <div className="text-retro-yellow">• Published 8 research papers in top-tier conferences</div>
-                            <div className="text-retro-cyan">• 3 U.S. Patents in ML algorithms and web optimization</div>
-                            <div className="text-retro-green">• Led $2M project delivering 300% ROI improvement</div>
-                            <div className="text-retro-pink">• Winner: IEEE Best Paper Award 2023</div>
-                            <div className="text-white">• Speaker at 12+ international tech conferences</div>
-                            <div className="text-retro-blue">• Open source contributions: 15K+ GitHub stars</div>
-                            <div className="text-retro-orange">• Mentor to 50+ junior developers and data scientists</div>
+                            <div className="text-retro-yellow">• Created an interactive tutoring platform utilizing Generative AI</div>
+                            <div className="text-retro-cyan">• Developed Monex - comprehensive expense management system</div>
+                            <div className="text-retro-green">• Enhanced tutoring solution with custom evaluation metrics</div>
+                            <div className="text-retro-pink">• Engineered robust financial management app with frontend interface</div>
+                            <div className="text-white">• Improved student satisfaction rate through AI-powered learning</div>
+                            <div className="text-retro-blue">• Built responsive web applications using modern technologies</div>
+                            <div className="text-retro-orange">• Developed secure authentication and transaction management systems</div>
                           </div>
                         </div>
                       )}

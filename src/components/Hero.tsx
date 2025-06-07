@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 // Define AnimatedSprite OUTSIDE of Hero
 const AnimatedSprite = ({ frameCount, frameDuration }: { frameCount: number, frameDuration: number }) => {
@@ -91,9 +92,11 @@ const AnimatedSprite = ({ frameCount, frameDuration }: { frameCount: number, fra
         className="w-12 h-24 md:w-16 md:h-32 lg:w-20 lg:h-40 flex-shrink-0 cursor-pointer hover:scale-110 transition-transform duration-200"
         style={{ width: '66px', height: '132px' }} // Keep the working inline style for size for now
       >
-        <img
+        <Image
           src={`/frame-${frame + 1}.PNG`}
           alt="Interactive character"
+          width={66}
+          height={132}
           className="w-full h-full object-contain"
           style={{
             imageRendering: 'pixelated',
@@ -104,19 +107,21 @@ const AnimatedSprite = ({ frameCount, frameDuration }: { frameCount: number, fra
   );
 };
 
+const terminalContent = [
+  'System booting...',
+  'Loading profile data...',
+  'Initializing portfolio interface...',
+  'Welcome to my digital workspace',
+  'Type "help" for commands or scroll to explore'
+];
+
 const Hero = () => {
   const [showCursor, setShowCursor] = useState(true);
   const [terminalLines, setTerminalLines] = useState<string[]>([]);
   const [currentLine, setCurrentLine] = useState(0);
    
   // Terminal content
-  const lines = [
-    'System booting...',
-    'Loading profile data...',
-    'Initializing portfolio interface...',
-    'Welcome to my digital workspace',
-    'Type "help" for commands or scroll to explore'
-  ];
+  const lines = terminalContent;
   
   // Blink cursor effect
   useEffect(() => {
@@ -137,7 +142,7 @@ const Hero = () => {
       
       return () => clearTimeout(timer);
     }
-  }, [currentLine]);
+  }, [currentLine, lines]);
   
   // AnimatedSprite component is NO LONGER defined here
   

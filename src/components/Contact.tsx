@@ -192,7 +192,7 @@ const Contact = () => {
                   className="h-full flex flex-col items-center justify-center text-center content-wrapper visual-hierarchy"
                 >
                   <div className="text-retro-green text-lg pixel-text pixel-bubble">TRANSMISSION COMPLETE</div>
-                  <p className="text-white/80">Your message has been received. I'll respond as soon as possible.</p>
+                  <p className="text-white/80">Your message has been received. I&apos;ll respond as soon as possible.</p>
                   <div className="animate-pulse text-retro-cyan">
                     <span className="text-2xl">⟳</span>
                   </div>

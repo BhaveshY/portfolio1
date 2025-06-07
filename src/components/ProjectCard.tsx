@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './ProjectCard.module.css';
+import Image from 'next/image';
 
 export interface Project {
   id: string;
@@ -19,7 +20,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <article className={styles.card}>
       {project.imageUrl && (
-        <img src={project.imageUrl} alt={`${project.title} thumbnail`} className={styles.image} />
+        <Image 
+          src={project.imageUrl} 
+          alt={`${project.title} thumbnail`} 
+          width={500} 
+          height={300} 
+          className={styles.image} 
+        />
       )}
       <h3 className={styles.title}>{project.title}</h3>
       <p className={styles.description}>{project.description}</p>

@@ -47,7 +47,7 @@ export default function SkillsPage() {
     <section id="skills" className={styles.skillsContainer}>
       <h1>My Skill Set</h1>
       <p style={{ marginBottom: '30px' }}>
-        A breakdown of my technical abilities, tools I work with, and core data science concepts I'm proficient in.
+        A breakdown of my technical abilities, tools I work with, and core data science concepts I&apos;m proficient in.
       </p>
 
       {Object.entries(skillsData).map(([categoryKey, skills]) => {

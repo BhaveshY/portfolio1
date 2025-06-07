@@ -17,7 +17,6 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [showModal, setShowModal] = useState(false);
   const [activeFilter, setActiveFilter] = useState('all');
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [showCursor, setShowCursor] = useState(true);
   const [loadingProgress, setLoadingProgress] = useState(0);
   
@@ -127,7 +126,7 @@ const Projects = () => {
           {/* Terminal-style section subheader */}
           <div className="w-full max-w-lg mx-auto p-2 border-retro-success bg-black/50 command-line mb-8">
             <div className="text-center text-white/90 font-mono text-sm">
-              <span className="text-retro-green">root@portfolio</span>:<span className="text-retro-blue">~/projects</span>$ <span className="typing-effect">find . -type f -name "*.awesome"</span>
+              <span className="text-retro-green">root@portfolio</span>:<span className="text-retro-blue">~/projects</span>$ <span className="typing-effect">find . -type f -name &quot;*.awesome&quot;</span>
             </div>
           </div>
 
@@ -166,9 +165,6 @@ const Projects = () => {
         {/* Projects grid */}
         <div 
           className="grid grid-cols-3 gap-2 items-stretch justify-items-stretch mx-auto max-w-full"
-          onMouseMove={(e) => {
-            setCursorPosition({ x: e.clientX, y: e.clientY });
-          }}
         >
           {filteredProjects.map((project) => (
             <div 

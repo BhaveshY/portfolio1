@@ -14,7 +14,7 @@ export default function ContactPage() {
       <h1>Get In Touch!</h1>
       <p style={{ marginBottom: '30px' }}>
         Have a question, a project idea, or just want to connect? Feel free to reach out.
-        I'm always open to discussing new opportunities and collaborations.
+        I&apos;m always open to discussing new opportunities and collaborations.
       </p>
 
       <form className={styles.contactForm} onSubmit={handleSubmit}>
@@ -28,7 +28,7 @@ export default function ContactPage() {
         </div>
         <div className={styles.formGroup}>
           <label htmlFor="message">Message:</label>
-          <textarea id="message" name="message" rows={6} placeholder="It's-a me, your message!" required></textarea>
+          <textarea id="message" name="message" rows={6} placeholder="It&apos;s-a me, your message!" required></textarea>
         </div>
         <button type="submit" className={styles.submitButton}>Send Message</button>
       </form>

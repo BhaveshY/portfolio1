@@ -33,8 +33,8 @@ export default function ProjectsPage() {
     <section id="projects">
       <h1>My Projects</h1>
       <p style={{ marginBottom: '30px' }}>
-        Here are some of the data science projects I've worked on. Each project showcases
-        different skills and challenges I've tackled. 
+        Here are some of the data science projects I&apos;ve worked on. Each project showcases
+        different skills and challenges I&apos;ve tackled. 
       </p>
       <div>
         {projectsData.length > 0 ? (

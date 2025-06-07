@@ -100,17 +100,17 @@ const About = () => {
                       {index === 0 && (
                         <div className="pl-4 text-white space-y-4 mb-6 animate-fade-in visual-hierarchy">
                           <p>
-                            Hello! I'm Bhavesh Sharad Yeole, a Computer Science graduate currently pursuing my Master's in Data and Knowledge Engineering. 
+                            Hello! I&apos;m Bhavesh Sharad Yeole, a Computer Science graduate currently pursuing my Master&apos;s in Data and Knowledge Engineering. 
                             I have a strong programming foundation and experience with Full-Stack Software Development, LLMs, and Generative AI. 
-                            I'm eager to leverage my knowledge in innovative projects and cutting-edge technologies.
+                            I&apos;m eager to leverage my knowledge in innovative projects and cutting-edge technologies.
                           </p>
                           <p>
-                            My journey began with a Bachelor's degree in Computer Engineering, and I'm now specializing in Data and Knowledge Engineering 
-                            at Otto Von Guericke University in Magdeburg, Germany. I've gained hands-on experience through internships in digital marketing, 
+                            My journey began with a Bachelor&apos;s degree in Computer Engineering, and I&apos;m now specializing in Data and Knowledge Engineering 
+                            at Otto Von Guericke University in Magdeburg, Germany. I&apos;ve gained hands-on experience through internships in digital marketing, 
                             web development, and React Native app development.
                           </p>
                           <p>
-                            Currently, I'm passionate about building modern web applications using React Native, integrating advanced features, 
+                            Currently, I&apos;m passionate about building modern web applications using React Native, integrating advanced features, 
                             and creating efficient user interfaces. I thrive on learning new technologies and solving complex problems 
                             in software development and data engineering.
                           </p>

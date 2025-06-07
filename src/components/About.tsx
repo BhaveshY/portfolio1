@@ -185,32 +185,10 @@ const About = () => {
               </div>
             </div>
             
-            <div className="animate-fade-slide-up" style={{ animationDelay: '0.5s' }}>
-              <div className="flex-1 monitor-frame-enhanced content-spacing overflow-hidden crt-red-tint">
-                <div className="monitor-content">
-                  <div className="bg-gradient-to-r from-cyan-900 to-indigo-900 px-3 py-2 flex justify-between items-center border-retro-standard">
-                    <span className="pixel-text text-sm text-cyan-400">TECHNICAL.DAT</span>
-                    <div className="flex space-x-2">
-                      <div className="w-3 h-3 bg-red-500"></div>
-                      <div className="w-3 h-3 bg-yellow-500"></div>
-                      <div className="w-3 h-3 bg-green-500"></div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-black border-t border-cyan-800 digital-noise p-0">
-                    <div className="text-center mt-6">
-                      <p className="text-retro-cyan pixel-text">Engage with my work below.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
         
-        <div className="text-center mt-6">
-          <p className="text-retro-cyan pixel-text">Engage with my work below.</p>
-        </div>
       </div>
     </section>
   );
